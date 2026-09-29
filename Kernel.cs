@@ -37,13 +37,16 @@ namespace Cosmosangle
                     if (s.Length > 6)
                     {
                         ss = s.Substring(0,6);
-
+                        ss = ss + "                                                                                        ";
+                        ss = ss.Substring(0, 32);
                     }
                     else 
                     {
+
                         ss = s;
-                    
-                    
+                        ss = ss + "                                                                                        ";
+                        ss = ss.Substring(0, 32);
+
                     }
                     s = ((double)i * d2).ToString();
                     if (s.Length > 6)
@@ -57,7 +60,7 @@ namespace Cosmosangle
 
 
                     }
-                    ss = ss + "\t\t\t\t\t\t\t" + s;
+                    ss = ss  + s;
                     Console.WriteLine(ss);
                     ss = "";
                 }
