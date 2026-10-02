@@ -15,7 +15,7 @@ namespace Cosmosangle
 
         protected override void Run()
         {
-            while(true)
+            while (true)
             {
                 double d = 360.00;
                 double dd = 16.00;
@@ -24,23 +24,23 @@ namespace Cosmosangle
                 double d2 = d1 / dd;
                 string s = "";
                 string ss = "";
-                int i  = 0;
-            
-                Console.BackgroundColor=ConsoleColor.White;
-            
-                Console.ForegroundColor=ConsoleColor.Black;
+                int i = 0;
+
+                Console.BackgroundColor = ConsoleColor.White;
+
+                Console.ForegroundColor = ConsoleColor.Black;
                 Console.Clear();
                 var input = "";// Console.ReadLine();
-                for (i = 0; i < 16; i++) 
-                { 
-                  s= ((double)i * ddd).ToString();
+                for (i = 0; i < 16; i++)
+                {
+                    s = ((double)i * ddd).ToString("f5");
                     if (s.Length > 6)
                     {
-                        ss = s.Substring(0,6);
+                        ss = s.Substring(0, 6);
                         ss = ss + "                                                                                        ";
                         ss = ss.Substring(0, 32);
                     }
-                    else 
+                    else
                     {
 
                         ss = s;
@@ -48,10 +48,10 @@ namespace Cosmosangle
                         ss = ss.Substring(0, 32);
 
                     }
-                    s = ((double)i * d2).ToString();
+                    s = ((double)i * d2).ToString("f5");
                     if (s.Length > 6)
                     {
-                        s = s.Substring(0,6);
+                        s = s.Substring(0, 6);
 
                     }
                     else
@@ -60,13 +60,13 @@ namespace Cosmosangle
 
 
                     }
-                    ss = ss  + s;
+                    ss = ss + s;
                     Console.WriteLine(ss);
                     ss = "";
                 }
                 input = Console.ReadLine();
-            
-                
+
+
             }
         }
     }
